@@ -5,7 +5,7 @@
 - 一日の間に生じた心のモヤモヤを吐き出してから、スッキリ眠ってもらうためのBot chatです。
 
 ## ③DEMO
- 
+https://lily-code77.github.io/kadai04_chat/
 
 ## ④工夫した点・こだわった点
 - cssを可愛い癒し系にした。
