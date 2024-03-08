@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Happy Chat</title>
+</head>
+
+<body>
+
+    <!-- コンテンツ表示画面 -->
+    <header>
+        <h1>Happy Chat</h1>
+    </header>
+    
+    <main>
+        <ul id="output">
+            <!-- ↓スクロールすると表示される要素が変化します。 -->
+            <div class="wrapper">
+                <div class="box"><img class="sheep" src="./img/flock2.png" alt="" width="60px"></div>
+                <div class="box"><img class="sheep" src="./img/flock2.png" alt="" width="60px"></div>
+                <div class="box"><img class="sheep" src="./img/flock2.png" alt="" width="60px"></div>
+                <div class="box"><img class="sheep" src="./img/flock2.png" alt="" width="60px"></div>
+                <div class="box"><img class="sheep" src="./img/flock2.png" alt="" width="60px"></div>
+            </div>
+
+            <li>
+                <div class="balloon">
+                    <p class="botName">悩まぬ子羊</p>
+                    <img class="img-circle" src="./img/sheep.png" alt="sheep" />
+                    <p class="say">お疲れさまです。<br>
+                        モヤモヤがあったら、なんでも話してください。<br>
+                        [수고하셨습니다.<br>
+                        모야 모야가 있으면 뭐든지 말해주세요.]
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </main>
+    
+    <footer>
+        <div class="inputName">You are: <input type="text" id="uname"></div>
+        <div class="onayami">
+            <textarea id="text" cols="50" rows="7" placeholder="どうしたの？"></textarea>
+            <button id="send">chat</button>
+        </div>
+    </footer>
+
+    <!--/ コンテンツ表示画面 -->
+
+    <!-- 以下JavaScript領域 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./js/script.js"></script>
+    <script type="module" src="js/main.js"></script>
+
+    <!-- 翻訳用 -->
+    <script src="./js/api_key.js"></script>
+    <script src="./js/translate.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,241 @@
+body{
+    font-family: Zen Maru Gothic;
+    line-height: 30px;
+}
+
+/* ヘッダー部分 */
+header {
+    width: 100%;
+    height: 120px;
+
+    background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+}
+
+h1 {
+    color: #eef59f;
+    -webkit-text-stroke: 1px rgb(154, 120, 249);
+    font-size: 90px;
+    font-weight: bold;
+    text-align: center;
+
+    padding-top: 30px;
+}
+
+/* メッセー表示部 */
+main {
+    width: 100%;
+    min-height: calc(80vh - 80px);
+
+    position: relative;
+    z-index: 1;
+    background-image: url("../img/night.png");
+    background-repeat: no-repeat;
+    background-size: 220%;
+}
+
+main::after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: white;
+    opacity: 0.5;
+}
+
+#output {
+    height: 800px;
+    overflow: auto;
+
+    list-style: none;
+}
+
+.botName {
+    padding-left: 10px;
+    font-size: 14px;
+}
+
+.youName {
+    font-size: 14px;
+}
+
+.botTime {
+    position: relative;
+    z-index: 3;
+    font-size: 12px;
+
+    padding-left: 120px;
+}
+
+.youTime {
+    position: relative;
+    z-index: 3;
+    font-size: 12px;
+
+    text-align: right;
+    padding-right: 20px;
+}
+
+.balloon {
+    position: relative;
+    z-index: 3;
+    /* margin: 15px 0; */
+    padding: 15px 0;
+    display: flex;
+    align-items: flex-start;
+}
+
+.youBalloon {
+    position: relative;
+    z-index: 3;
+    margin-right: 15px;
+    justify-content: flex-end;
+}
+
+.img-circle {
+    width: 50px;
+    height: 50px;
+
+    margin: 0 15px;
+    border-radius: 25px;
+    border: 0.15rem solid rgb(154, 120, 249);
+
+    background-color: white;
+}
+
+.say {
+    max-width: 500px;
+
+    padding: 10px;
+    border-radius: 10px;
+
+    background: #ffffff;
+}
+
+.youSay {
+    background-color: #9ce060;
+}
+
+#ty {
+    vertical-align: baseline;
+}
+
+/* フッター部分 */
+footer {
+    width: 100%;
+    height: 220px;
+
+    background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+}
+
+.inputName {
+    color: rgb(127, 82, 249);
+
+    text-align: right;
+    padding-top: 20px;
+    margin-right: 240px;
+    margin-bottom: 5px;
+}
+
+.onayami {
+    text-align: right;
+    margin-right: 10px;
+}
+
+input {
+    border: 2px solid rgb(127, 82, 249);
+    border-radius: 6px;
+}
+
+textarea {
+    border: 2px solid rgb(127, 82, 249);
+    border-radius: 6px;
+}
+
+::placeholder {
+    color: rgb(127, 82, 249);
+}
+
+#send {
+    font-size: 17px;
+    font-weight: bold;
+    padding: 10px 10px;
+    background: #eef59f;
+    color: rgb(127, 82, 249);
+    border-radius: 30px;
+    box-shadow: rgba(100, 100, 111, 0.3)0px 7px 29px 0px;
+    transition: all 0.2s;
+}
+
+#send:hover {
+    background: rgb(221, 227, 245);
+    box-shadow: rgba(100, 100, 111, 0.3)0px 7px 29px 0px;
+}
+
+/* ↓スクロールすると表示される要素が変化します。 */
+.wrapper {
+    width: 100%;
+    height: 70px;
+    position: relative;
+}
+
+.sheep {
+    border-radius: 50%;
+
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.box {
+    position: fixed;
+    z-index: 3;
+    top: 100px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #c9a0fb;
+    animation: side-scroll ease forwards;
+    animation-timeline: scroll();
+    animation-range: contain 0% contain 100%;
+}
+
+.box:nth-of-type(1) {
+    right: 0;
+}
+
+.box:nth-of-type(2) {
+    right: -90px;
+}
+
+.box:nth-of-type(3) {
+    right: -180px;
+}
+
+.box:nth-of-type(4) {
+    right: -270px;
+}
+
+.box:nth-of-type(5) {
+    right: -360px;
+}
+
+@keyframes side-scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(-100vw);
+    }
+}

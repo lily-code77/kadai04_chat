@@ -1,0 +1,5 @@
+# firebaseのAPI keyの保管
+js/firebaseApikey.js
+
+# Google translateのAPI keyの保管
+js/api_key.js
